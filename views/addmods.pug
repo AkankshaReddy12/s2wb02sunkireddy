@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p rows:#{query.rows} , columns:#{query.cols}
+  - var rows=Number(query.rows)
+  - var cols=Number(query.cols)
+
+
+ 
