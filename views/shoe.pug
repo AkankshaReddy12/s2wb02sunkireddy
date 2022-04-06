@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  -let results = [{shoe_name:"Nike",shoe_color:"Black",shoe_size:5},{shoe_name:"Addidas",shoe_color:"White",shoe_size:6},{shoe_name:"Puma",shoe_color:"Brown",shoe_size:7}]
+  div(class="container-fluid")
+  div(class="row")
+    -
+    each item in results 
+        div(class="col-sm-2") #{item.shoe_name} #{item.shoe_color} #{item.shoe_size}
