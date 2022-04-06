@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 var shoeRouter = require('./routes/shoe');
 var addmodsRouter = require('./routes/addmods');
 var selectorRouter = require('./routes/selector');
+
 var app = express();
 
 // view engine setup
@@ -25,7 +26,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/shoe',shoeRouter);
 app.use('/addmods',addmodsRouter);
-app.use('./selector',addmodsRouter);
+app.use('/selector',selectorRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
