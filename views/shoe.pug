@@ -1,4 +1,3 @@
-extends layout
 
 block content
   h1= title
@@ -6,5 +5,12 @@ block content
   div(class="container-fluid")
   div(class="row")
     -
-    each item in results 
-        div(class="col-sm-2") #{item.shoe_name} #{item.shoe_color} #{item.shoe_size}
+    each j,index in results 
+            div(class="col-sm-2" onclick=`buy(${index})`)  #{j.shoe_name}  
+            div(class="col-sm-2" onclick=`buy(${index})`)  #{j.shoe_color}
+            div(class="col-sm-2" onclick=`buy(${index})`)  #{j.shoe_size}
+script.
+    function buy(r)
+    {
+        alert(`You have purchased item ${r+1}`);
+    }
